@@ -47,16 +47,16 @@ export function TopicDetailPanel() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 400 }}
         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className="fixed inset-0 h-screen w-full md:w-[480px] md:right-0 md:left-auto bg-background md:border-l border-border shadow-2xl overflow-y-auto"
+        className="fixed inset-0 h-screen w-full md:w-[480px] md:right-0 md:left-auto bg-background md:border-l border-border overflow-y-auto"
         style={{ zIndex: 10000 }}
         ref={scrollRef}
       >
-        <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-10 p-3  border-b border-border">
+        <div className="sticky top-0 backdrop-blur-sm z-10 p-3 pb-2  border-b border-border">
           <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="flex items-start justify-between gap-2 mt-1"
+            className="flex items-start justify-between gap-2 pt-2"
           >
             <div className="flex items-center gap-4 flex-1 min-w-0 px-2">
               <motion.div

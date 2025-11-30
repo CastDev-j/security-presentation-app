@@ -7,7 +7,7 @@ import { TopicListMobile } from "@/components/topic-list-mobile";
 
 export default function Home() {
   return (
-    <main className="relative w-full h-screen overflow-hidden">
+    <main className="relative w-full h-screen overflow-hidden bg-background">
       <Header />
 
       <div className="absolute inset-0 pt-16 hidden md:block">

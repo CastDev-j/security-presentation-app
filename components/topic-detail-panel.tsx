@@ -47,32 +47,33 @@ export function TopicDetailPanel() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 400 }}
         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className="fixed top-0 right-0 h-screen w-full md:w-[480px] bg-background border-l border-border shadow-2xl overflow-y-auto pt-16"
+        className="fixed inset-0 h-screen w-full md:w-[480px] md:right-0 md:left-auto bg-background md:border-l border-border shadow-2xl overflow-y-auto"
+        style={{ zIndex: 10000 }}
         ref={scrollRef}
       >
-        <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-10 p-6 border-b border-border">
+        <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-10 p-3  border-b border-border">
           <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="flex items-start justify-between gap-4"
+            className="flex items-start justify-between gap-2 mt-1"
           >
-            <div className="flex items-center gap-3 flex-1 min-w-0">
+            <div className="flex items-center gap-4 flex-1 min-w-0 px-2">
               <motion.div
                 initial={{ scale: 0, rotate: -180 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
                 className="shrink-0"
               >
-                <Icon className="w-10 h-10 text-accent" strokeWidth={1.5} />
+                <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
               </motion.div>
               <div className="min-w-0">
-                <h2 className="text-2xl font-bold text-balance">
+                <h2 className="text-lg font-bold text-balance">
                   {topic.title}
                 </h2>
-                <p className="text-sm text-muted-foreground">
-                  {topic.description}
-                </p>
+                <div className="min-w-0 block sm:hidden">
+                  <p className="text-foreground">{topic.title}</p>
+                </div>
               </div>
             </div>
             <Button

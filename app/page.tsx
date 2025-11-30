@@ -10,7 +10,7 @@ export default function Home() {
     <main className="relative w-full h-screen overflow-hidden">
       <Header />
 
-      <div className="absolute inset-0 pt-16">
+      <div className="absolute inset-0 pt-16 hidden md:block">
         <SecurityScene />
       </div>
 
